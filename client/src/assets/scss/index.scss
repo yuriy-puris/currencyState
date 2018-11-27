@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Infant:700|Roboto:300,400,500');
+//libs
+@import './libs/normalize.scss';
+@import './libs/mixins.scss';
+@import './libs/include-media.scss';
+@import './libs/styleguide.scss';
+
+//blocks
+@import './blocks/header.scss';
+@import './blocks/footer.scss';
+@import './blocks/menu.scss';
+@import './blocks/registration-form.scss';
+@import './blocks/products.scss';
+
+//pages
+@import './pages/home-page.scss';
+@import './pages/checkout-page.scss';

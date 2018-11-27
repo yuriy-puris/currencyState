@@ -1,0 +1,195 @@
+$color-white: #fff;
+$color-grey: #f0f0f0;
+$color-black: #000000;
+
+.header_ {
+  background: $color-black;
+  color: $color-white;
+  text-align: right;
+  padding: 0 15px;
+  height: 35px;
+  flex-grow: 0;
+  position: relative;
+  .user-card {
+    height: 100%;
+  }
+  .product-card {
+    height: 100%;
+  }
+}
+.menu-button {
+  display: inline-block;
+  float: left;
+  width: 30px;
+  height: 10px;
+  position: relative;
+  margin: 12px 0 0;
+  cursor: pointer;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: $color-white;
+    transition: top .5s, transform .5s;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: $color-white;
+    transition: bottom .5s, transform .5s;
+  }
+  &.active {
+    &::before {
+      transform: rotateZ(-45deg);
+      top: 4px;
+    }
+    &::after {
+      transform: rotateZ(45deg);
+      bottom: 4px;
+    }
+  }
+}
+.logo {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  a {
+    color: $color-white;
+  }
+}
+//user card
+.user-card {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+  vertical-align: top;
+}
+.user-name {
+  text-transform: capitalize;
+  display: inline-block;
+  margin: 8px 0 0 5px;
+  color: #d8d8d8;
+}
+.user-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 300px;
+  padding: 20px;
+  background: $color-white;
+  color: $color-black;
+  text-align: left;
+  .sign-up {
+    background: lighten($color-black, 50%);
+    margin: 20px 0 0;
+    cursor: pointer;
+  }
+}
+.user-icon {
+  vertical-align: top;
+  display: inline-block;
+  height: 18px;
+  width: 14px;
+  text-indent: -999px;
+  overflow: hidden;
+  transform: translateY(50%);
+  cursor: pointer;
+}
+.form-row {
+  margin: 0 0 20px;
+}
+.form-control {
+  height: 30px;
+}
+.sign-up {
+  display: inline-block;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background: $color-black;
+  border-color: transparent;
+  color: $color-white;
+  text-align: center;
+}
+//product card
+.product-card {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+}
+.product-content {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 300px;
+  padding: 20px;
+  background: $color-white;
+  color: $color-black;
+  text-align: left;
+}
+.icon-card {
+  vertical-align: top;
+  display: inline-block;
+  height: 17px;
+  width: 18px;
+  text-indent: -999px;
+  overflow: hidden;
+  transform: translateY(50%);
+  cursor: pointer;
+}
+.product-row {
+  display: flex;
+  align-items: center;
+  &:not(:first-child) {
+    margin: 10px 0 0;
+  }
+}
+.submit-row {
+  text-align: center;
+}
+.product-img {
+  background-size: cover;
+  background-position: center;
+  width: 60px;
+  height: 60px;
+}
+.product-title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 80%;
+  padding: 0 10px;
+}
+.product-price {
+  padding: 0 10px;
+}
+.empty-note {
+  text-align: center;
+}
+.total-amount {
+  margin: 10px 0;
+  padding: 10px 0;
+  border: 1px solid;
+  border-color: $color-grey transparent;
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  span {
+    font-size: 18px;
+    float: right;
+  }
+}
+.btn-card {
+  width: 100%;
+}
